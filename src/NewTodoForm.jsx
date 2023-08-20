@@ -18,7 +18,7 @@ export function NewTodoForm({ onSubmit }) {
         <form onSubmit={handleSubmit} className='new-item-form'>
             <div className='form-row'>
                 <label htmlFor="item">
-                    ✚ Create New Todo
+                    Create New Todo
                 </label>
                 <input
                     value={newItem}
