@@ -16,12 +16,16 @@
     "build": "tsc && vite build && electron-builder",
     "preview": "vite preview",
     "pree2e": "vite build --mode=test",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
     "electron-updater": "^5.3.0"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.4.0",
     "@playwright/test": "^1.32.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -38,5 +42,16 @@
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "Todo It Better",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "path/to/your/icon.ico"
+    }
   }
 }

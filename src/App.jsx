@@ -4,7 +4,7 @@ import { TodoList } from './TodoList'
 
 import './App.scss'
 
-export default function App() {
+function App() {
   const [todos, setTodos] = useState(() => {
     const localValue = localStorage.getItem("ITEMS")
     if (localValue == null) return []
@@ -53,3 +53,5 @@ export default function App() {
     </div>
   )
 }
+
+export default App;
